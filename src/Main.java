@@ -15,5 +15,18 @@ public class Main {
 
         // Obtendo a data e hora atual em formato UTC (Instant)
         Instant d3 = Instant.now();
+
+
+        // Convertendo strings em LocalDate e LocalDateTime
+
+        // Convertendo uma string para LocalDate (sem hora)
+        LocalDate d4 = LocalDate.parse("2024-07-10");
+
+        // Convertendo uma string para LocalDateTime com hora específica
+        LocalDateTime d5 = LocalDateTime.parse("2024-07-10T11:34:14");
+
+        // Convertendo uma string para Instant (com zona de tempo explícita)
+        Instant d6 = Instant.parse("2024-07-10T11:34:14Z"); // Horário GMT
+        Instant d7 = Instant.parse("2024-07-10T11:34:14-03:00"); // Fuso horário de Brasília
     }
 }
