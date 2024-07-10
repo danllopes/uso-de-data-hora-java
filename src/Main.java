@@ -39,5 +39,13 @@ public class Main {
 
         // Convertendo uma string formatada para LocalDateTime
         LocalDateTime d9 = LocalDateTime.parse("10/07/2024 14:54", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+
+        // Criando LocalDate e LocalDateTime explicitamente
+
+        // Criando um LocalDate específico
+        LocalDate d10 = LocalDate.of(2024, 7, 10);
+
+        // Criando um LocalDateTime específico
+        LocalDateTime d11 = LocalDateTime.of(2024, 7, 10, 14, 58);
     }
 }
