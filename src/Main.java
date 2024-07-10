@@ -1,6 +1,7 @@
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,5 +29,15 @@ public class Main {
         // Convertendo uma string para Instant (com zona de tempo explícita)
         Instant d6 = Instant.parse("2024-07-10T11:34:14Z"); // Horário GMT
         Instant d7 = Instant.parse("2024-07-10T11:34:14-03:00"); // Fuso horário de Brasília
+
+        // Formatando datas e horas
+        // documentação no site da oracle -> https://encurtador.com.br/LKY9R
+
+        // Formatando um LocalDate para uma string específica
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate d8 = LocalDate.parse("10/07/2024", formatter1);
+
+        // Convertendo uma string formatada para LocalDateTime
+        LocalDateTime d9 = LocalDateTime.parse("10/07/2024 14:54", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
     }
 }
